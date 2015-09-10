@@ -53,12 +53,21 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    _Labelka.Labelka.text = [NSString stringWithFormat: @"Nieruchomość do wynajęcia %ld", (long)indexPath.row];
+    //_Labelka.Labelka.text = [NSString stringWithFormat: @"Nieruchomość do wynajęcia %ld", (long)indexPath.row];
     
-    NSLog(@"Nieruchomość do wynajęcia %ld", (long)indexPath.row);
+    //NSLog(@"Nieruchomość do wynajęcia %ld", (long)indexPath.row);
     
     return cell;
 }
+
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(RMTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.Labelka.text = [NSString stringWithFormat: @"Nieruchomość do wynajęcia %ld", (long)indexPath.row];
+    NSLog(@"Nieruchomość do wynajęcia %ld", (long)indexPath.row);
+
+}
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
