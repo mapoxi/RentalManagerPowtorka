@@ -46,12 +46,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    RMTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
          [tableView registerNib: [UINib nibWithNibName:@"RMTableVievCell" bundle:nil] forCellReuseIdentifier:CellIdentifier];
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];    }
     
     //_Labelka.Labelka.text = [NSString stringWithFormat: @"Nieruchomość do wynajęcia %ld", (long)indexPath.row];
     
