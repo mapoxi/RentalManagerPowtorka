@@ -49,7 +49,7 @@
     RMTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
-         [tableView registerNib: [UINib nibWithNibName:@"RMTableVievCell" bundle:nil] forCellReuseIdentifier:CellIdentifier];
+         [tableView registerNib: [UINib nibWithNibName:@"RMTableViewCell" bundle:nil] forCellReuseIdentifier:CellIdentifier];
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];    }
     
     //_Labelka.Labelka.text = [NSString stringWithFormat: @"Nieruchomość do wynajęcia %ld", (long)indexPath.row];
