@@ -11,7 +11,7 @@
 
 @interface RMTableViewController ()
 
-@property RMTableViewCell *Labelka;
+@property RMTableViewCell *labelka;
 
 @end
 
@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _Labelka = [[RMTableViewCell alloc] init];
+    _labelka = [[RMTableViewCell alloc] init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -46,7 +46,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
-    RMTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    RMTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
          [tableView registerNib: [UINib nibWithNibName:@"RMTableViewCell" bundle:nil] forCellReuseIdentifier:CellIdentifier];
@@ -62,7 +62,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(RMTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    cell.Labelka.text = [NSString stringWithFormat: @"Nieruchomość do wynajęcia %ld", (long)indexPath.row];
+    cell.labelka.text = [NSString stringWithFormat: @"Nieruchomość do wynajęcia %ld", (long)indexPath.row];
     NSLog(@"Nieruchomość do wynajęcia %ld", (long)indexPath.row);
 
 }

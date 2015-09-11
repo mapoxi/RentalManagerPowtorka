@@ -10,6 +10,6 @@
 
 @interface RMTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *Labelka;
+@property (strong, nonatomic) IBOutlet UILabel *labelka;
 
 @end

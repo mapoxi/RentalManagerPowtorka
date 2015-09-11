@@ -26,6 +26,7 @@
             <animations/>
             <connections>
                 <outlet property="Labelka" destination="Gqj-l2-Emb" id="sNI-TA-hfF"/>
+                <outlet property="labelka" destination="Gqj-l2-Emb" id="oPe-EE-n5V"/>
             </connections>
         </tableViewCell>
     </objects>
